@@ -1,6 +1,3 @@
-
-
-
 // import React, { useState } from 'react';
 // import TableNumbers from './TableNumbers';
 // import Menu from './Menu';
@@ -89,6 +86,7 @@ import TableNumbers from './TableNumbers';
 import Menu from './Menu';
 import Cart from './Cart';
 import Sales from './Sales';
+import "./App.css"
 
 const App = () => {
   const [tableNumber, setTableNumber] = useState(null);
@@ -149,18 +147,28 @@ const App = () => {
     { id: 1, name: 'Item 1', price: 10 },
     { id: 2, name: 'Item 2', price: 15 },
     { id: 3, name: 'Item 3', price: 12 },
+    { id: 4, name: 'Item 4', price: 12 },
+    { id: 5, name: 'Item 5', price: 12 },
+    { id: 6, name: 'Item 6', price: 12 },
+    { id: 4, name: 'Item 4', price: 12 },
+    { id: 5, name: 'Item 5', price: 12 },
+    { id: 6, name: 'Item 6', price: 12 },
     // Add more menu items as needed
   ];
 
   return (
-    <div>
+    <div> 
+      <nav id = "navbar_items">
+        <h1>Breakaffe</h1>
+      </nav>
       {!tableNumber && !salesPageVisible && (
         <TableNumbers onTableClick={handleTableClick} onSalesClick={handleSalesClick} />
       )}
       {tableNumber && (
         <div>
           <nav>
-            <button onClick={handleBackToTables}>Back to Tables</button>
+            <button onClick={handleBackToTables} id="backButtonTableTag"> Back to Table
+            </button>
           </nav>
           <Menu items={menuItems} onAddToCart={handleAddToCart} />
           <Cart cartItems={tableCarts[tableNumber] || []} onRemoveItem={handleRemoveItem} onPaid={handlePaid} />
@@ -169,7 +177,8 @@ const App = () => {
       {salesPageVisible && (
         <div>
           <nav>
-            <button onClick={() => setSalesPageVisible(false)}>Back to Table Numbers</button>
+            <button onClick={() => setSalesPageVisible(false)}>
+            </button>
           </nav>
           <Sales sales={sales} />
         </div>

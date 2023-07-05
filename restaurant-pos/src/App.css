@@ -1,0 +1,19 @@
+#navbar_items{
+    background-color: #713600;
+    color: #F2EBEB;
+    height: 75px;
+    width: auto;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-style: bold;
+    font-family: 'Qwitcher Grypen',cursive;
+    margin-bottom: 60px;
+}
+#landing_page{
+    padding: 0px;
+}

@@ -1,0 +1,33 @@
+body{
+    display:grid;
+    grid-template-columns: auto;
+}
+#menu_header_div{
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+#menu_items_tile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: gray; */
+    padding: 40px 100px;
+    flex-flow: row wrap;
+}
+
+.menu_items_tile_box{
+    height : 190px;
+    width: 175px;
+    background-color: #FFA14B;
+    border-radius: 5px;
+    margin: 10px;
+    display: grid;
+    
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 70% auto;
+    padding: 0px;
+}
