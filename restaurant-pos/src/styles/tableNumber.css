@@ -8,8 +8,8 @@
 
 .table_button{
     background-color: #EBA361;
-    height: 130px;
-    width: 130px;
+    height: 175px;
+    width: 175px;
     border-radius: 12px;
     border-color: rgba(0, 0, 0, 0.267);
     font-family: "Radio Canada";
@@ -26,7 +26,7 @@
 #table_number_sales_button_div{
     display: flex;
     justify-content: right;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-right: 50px;
 }
 

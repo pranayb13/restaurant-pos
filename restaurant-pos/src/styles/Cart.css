@@ -1,0 +1,7 @@
+#cartBarTable{
+    background-color: black;
+    height: 120px;
+    width: 1920px;
+    display: flex;
+    justify-content: baseline;
+}

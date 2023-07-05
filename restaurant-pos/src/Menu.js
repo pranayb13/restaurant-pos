@@ -1,5 +1,8 @@
 import React from 'react';
 import "./styles/Menu.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = ({ items, onAddToCart }) => {
   return (
@@ -11,7 +14,15 @@ const Menu = ({ items, onAddToCart }) => {
         {items.map(item => (
           <ul className="menu_items_tile_box" key={item.id}>
               <p>{item.name} - RS. {item.price}</p>
-              <button className="menu_items_button"onClick={() => onAddToCart(item)}>Add</button>
+              <div id="itemsTilesQuantityDiv">
+                <button className="quantityChangeButton">
+                  <FontAwesomeIcon icon={faMinus} />
+                </button>
+                <span id="quantityDisplay">0</span>
+                <button className="quantityChangeButton"onClick={() => onAddToCart(item)}>
+                  <FontAwesomeIcon icon={faPlus} />
+                </button>
+              </div>
           </ul>
         ))}
       </div>
