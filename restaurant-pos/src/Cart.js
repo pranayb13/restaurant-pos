@@ -1,24 +1,32 @@
 import React from 'react';
 import "./styles/Cart.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesUp } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = ({ cartItems, onRemoveItem, onPaid }) => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-  const handleRemoveItem = (itemId) => {
-    onRemoveItem(itemId);
-  };
+  // const handleRemoveItem = (itemId) => {
+  //   onRemoveItem(itemId);
+  // };
 
   const handlePaid = () => {
     onPaid(totalPrice);
   };
 
   return (
-    <div>
-      {/* <div id="cartBarTable">
-        <span id="cartBiggerCircle"></span>
-        <span id="cartSmallerCircle"></span>
-      </div> */}
-      <h1>Cart</h1>
+    <div id="headerDiv">
+      <div id="cartBarTableTop">
+          <span id="cartBiggerCircle" onClick={handlePaid}>
+            <span id="cartSmallerCircle">
+              <FontAwesomeIcon id="scrollUpIcon" icon={faAnglesUp} />
+            </span>
+          </span>
+      </div>
+      <div id="priceDiv">
+        <span >Total Price: ${totalPrice}</span>
+      </div>
+      {/* <h1>Cart</h1>
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>
@@ -26,9 +34,7 @@ const Cart = ({ cartItems, onRemoveItem, onPaid }) => {
             <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
           </li>
         ))}
-      </ul>
-      <h3>Total Price: ${totalPrice}</h3>
-      <button onClick={handlePaid}>Paid</button>
+      </ul> */}
     </div>
   );
 };

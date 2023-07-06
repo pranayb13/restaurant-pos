@@ -10,17 +10,16 @@
     background-color: #EBA361;
     height: 175px;
     width: 175px;
-    border-radius: 12px;
-    border-color: rgba(0, 0, 0, 0.267);
+    border-radius: 6px;
+    border-color: rgba(102, 102, 102, 0.082);
     font-family: "Radio Canada";
-}
-.table_button:hover{
     cursor: pointer;
 }
 #table_number_headings{
     display: flex;
     justify-content: center;
     padding-bottom: 00px;
+    margin-top: 20px;
 }
 
 #table_number_sales_button_div{

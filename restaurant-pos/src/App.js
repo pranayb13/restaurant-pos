@@ -77,10 +77,14 @@ const App = () => {
   ];
 
   return (
-    <div> 
+    <div id="mainDiv"> 
       <nav id = "navbar_items">
-        <h1>Breakaffe</h1>
-        <FontAwesomeIcon icon={faArrowRightFromBracket} />
+        <div id="navbarHeader">
+          <h1>Breakaffe</h1>
+        </div>
+        <div>
+          <FontAwesomeIcon id="exitButton" icon={faArrowRightFromBracket} />
+        </div>
       </nav>
       {!tableNumber && !salesPageVisible && (
         <TableNumbers onTableClick={handleTableClick} onSalesClick={handleSalesClick} />
@@ -89,8 +93,6 @@ const App = () => {
         <div>
           <div id="backButtonDiv">
             <FontAwesomeIcon onClick={handleBackToTables} icon={faArrowLeft} className="backButton"/>
-            {/* <button onClick={handleBackToTables} id="backButtonTableTag"> 
-            </button> */}
           </div>
           <Menu items={menuItems} onAddToCart={handleAddToCart} />
           <Cart cartItems={tableCarts[tableNumber] || []} onRemoveItem={handleRemoveItem} onPaid={handlePaid} />
@@ -100,8 +102,6 @@ const App = () => {
         <div>
           <div>
             <FontAwesomeIcon onClick={() => setSalesPageVisible(false)} icon={faArrowLeft} className="backButton"/>
-            {/* <button onClick={() => setSalesPageVisible(false)}>Back
-            </button> */}
           </div>
           <Sales sales={sales} />
         </div>

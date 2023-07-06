@@ -14,7 +14,7 @@ body{
     align-items: center;
     /* background-color: gray; */
     padding: 40px 100px;
-    flex-flow: row wrap;
+    flex-flow: wrap;
 }
 
 .menu_items_tile_box{

@@ -1,3 +1,7 @@
+#mainDiv{
+    margin: 0px;
+    padding: 0px;
+}
 #navbar_items{
     background-color: #713600;
     color: #F2EBEB;
@@ -6,13 +10,13 @@
     position: relative;
     margin: 0px;
     padding: 0px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 98% 5%;
     align-items: center;
+    justify-content: center;
     font-size: 40px;
-    font-style: bold;
     font-family: 'Qwitcher Grypen',cursive;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 #landing_page{
     padding: 0px;
@@ -22,4 +26,17 @@
     cursor: pointer;
     height: 30px;
     width: 30px;
+}
+#navbarHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbarHeader>h1{
+    margin: 0px;
+}
+#exitButton{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }
